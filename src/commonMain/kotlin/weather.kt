@@ -1,6 +1,6 @@
 val weatherChain = mapOf("sun" to listOf("sun", "sun", "sun", "sun", "sun", "sun", "sun", "sun", "sun", "rain"), "rain" to listOf("sun", "rain"))
 
-fun calWeather(): List<String> {
+fun predictWeather(): List<String> {
     val initialWeather = weatherChain.entries.shuffled().first().key
     println(initialWeather)
     val l = mutableListOf(initialWeather)

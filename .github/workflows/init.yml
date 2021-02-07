@@ -5,9 +5,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-20.04]
     steps:
     - uses: actions/checkout@v2
     - name: gradlew check
       run: |
         ./gradlew check
+    - run: ./gradlew runDebugExecutableNative
