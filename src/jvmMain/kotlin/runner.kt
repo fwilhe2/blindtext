@@ -1,3 +1,3 @@
 fun main() {
- println(calWeather().joinToString())
+ println(predictWeather().joinToString())
 }
