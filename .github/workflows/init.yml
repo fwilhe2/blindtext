@@ -11,3 +11,4 @@ jobs:
     - name: gradlew check
       run: |
         ./gradlew check
+    - run: ./gradlew runDebugExecutableNative
